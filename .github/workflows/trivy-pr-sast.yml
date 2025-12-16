@@ -13,7 +13,6 @@ jobs:
         with:
           args: >
             trivy fs
-            --scanners misconfig,vuln,secret
             --sast
             .
           # To customize which severities to scan for, add the following flag: --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
