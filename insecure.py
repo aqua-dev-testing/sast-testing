@@ -1,7 +1,8 @@
-API_KEY = "sk_live_1234567890abcdef"  # hardcoded secret
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
 
-def calculate(expr):
-    return eval(expr)  # dangerous eval
-
-with open(reading_path, "rb") as file:
-    data = pickle.load(file)
+def load_data(path):
+    with open(path, "rb") as f:
+        return pickle.load(f)
